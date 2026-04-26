@@ -1,0 +1,2533 @@
+/* Dark theme (default) */
+.dark .milkdown-editor-wrapper {
+  background: #171717;
+  color: #e5e5e5;
+}
+
+/* Light theme */
+.light .milkdown-editor-wrapper {
+  background: #ffffff;
+  color: #1a1a1a;
+}
+
+.milkdown {
+  background: transparent !important;
+}
+
+/* Dark theme editor */
+.dark .milkdown .editor {
+  background: transparent !important;
+  color: #e5e5e5 !important;
+  outline: none !important;
+  padding: 0 !important;
+}
+
+/* Light theme editor */
+.light .milkdown .editor {
+  background: transparent !important;
+  color: #1a1a1a !important;
+  outline: none !important;
+  padding: 0 !important;
+}
+
+.milkdown .ProseMirror {
+  outline: none !important;
+}
+
+/* Typography - Dark theme */
+.dark .milkdown .editor h1,
+.dark .milkdown .ProseMirror h1 {
+  color: #f5f5f5 !important;
+  font-size: 2.25rem !important;
+  font-weight: 700 !important;
+  line-height: 2.5rem !important;
+  margin-top: 0 !important;
+  margin-bottom: 1rem !important;
+  border-bottom: 1px solid #404040 !important;
+  padding-bottom: 0.5rem !important;
+}
+
+/* Typography - Light theme */
+.light .milkdown .editor h1,
+.light .milkdown .ProseMirror h1 {
+  color: #0a0a0a !important;
+  font-size: 2.25rem !important;
+  font-weight: 700 !important;
+  line-height: 2.5rem !important;
+  margin-top: 0 !important;
+  margin-bottom: 1rem !important;
+  border-bottom: 1px solid #e5e5e5 !important;
+  padding-bottom: 0.5rem !important;
+}
+
+.dark .milkdown .editor h2,
+.dark .milkdown .ProseMirror h2 {
+  color: #f5f5f5 !important;
+  font-size: 1.875rem !important;
+  font-weight: 600 !important;
+  line-height: 2.25rem !important;
+  margin-top: 1.5rem !important;
+  margin-bottom: 1rem !important;
+  border-bottom: 1px solid #404040 !important;
+  padding-bottom: 0.5rem !important;
+}
+
+.light .milkdown .editor h2,
+.light .milkdown .ProseMirror h2 {
+  color: #0a0a0a !important;
+  font-size: 1.875rem !important;
+  font-weight: 600 !important;
+  line-height: 2.25rem !important;
+  margin-top: 1.5rem !important;
+  margin-bottom: 1rem !important;
+  border-bottom: 1px solid #e5e5e5 !important;
+  padding-bottom: 0.5rem !important;
+}
+
+.dark .milkdown .editor h3,
+.dark .milkdown .ProseMirror h3,
+.dark .milkdown .editor h4,
+.dark .milkdown .ProseMirror h4,
+.dark .milkdown .editor h5,
+.dark .milkdown .ProseMirror h5,
+.dark .milkdown .editor h6,
+.dark .milkdown .ProseMirror h6 {
+  color: #f5f5f5 !important;
+  font-weight: 600 !important;
+}
+
+.dark .milkdown .editor h3,
+.dark .milkdown .ProseMirror h3 {
+  font-size: 1.5rem !important;
+  line-height: 2rem !important;
+  margin-top: 1.5rem !important;
+  margin-bottom: 0.75rem !important;
+}
+
+.dark .milkdown .editor h4,
+.dark .milkdown .ProseMirror h4 {
+  font-size: 1.25rem !important;
+  line-height: 1.75rem !important;
+  margin-top: 1.25rem !important;
+  margin-bottom: 0.75rem !important;
+}
+
+.dark .milkdown .editor h5,
+.dark .milkdown .ProseMirror h5 {
+  font-size: 1.125rem !important;
+  line-height: 1.75rem !important;
+  margin-top: 1rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.dark .milkdown .editor h6,
+.dark .milkdown .ProseMirror h6 {
+  font-size: 1rem !important;
+  line-height: 1.5rem !important;
+  margin-top: 1rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.light .milkdown .editor h3,
+.light .milkdown .ProseMirror h3,
+.light .milkdown .editor h4,
+.light .milkdown .ProseMirror h4,
+.light .milkdown .editor h5,
+.light .milkdown .ProseMirror h5,
+.light .milkdown .editor h6,
+.light .milkdown .ProseMirror h6 {
+  color: #0a0a0a !important;
+  font-weight: 600 !important;
+}
+
+.light .milkdown .editor h3,
+.light .milkdown .ProseMirror h3 {
+  font-size: 1.5rem !important;
+  line-height: 2rem !important;
+  margin-top: 1.5rem !important;
+  margin-bottom: 0.75rem !important;
+}
+
+.light .milkdown .editor h4,
+.light .milkdown .ProseMirror h4 {
+  font-size: 1.25rem !important;
+  line-height: 1.75rem !important;
+  margin-top: 1.25rem !important;
+  margin-bottom: 0.75rem !important;
+}
+
+.light .milkdown .editor h5,
+.light .milkdown .ProseMirror h5 {
+  font-size: 1.125rem !important;
+  line-height: 1.75rem !important;
+  margin-top: 1rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.light .milkdown .editor h6,
+.light .milkdown .ProseMirror h6 {
+  font-size: 1rem !important;
+  line-height: 1.5rem !important;
+  margin-top: 1rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+/* Generic fallback styles */
+.milkdown .editor h3,
+.milkdown .ProseMirror h3 {
+  color: #f5f5f5 !important;
+  font-size: 1.5rem !important;
+  font-weight: 600 !important;
+  line-height: 2rem !important;
+  margin-top: 1.5rem !important;
+  margin-bottom: 0.75rem !important;
+}
+
+.milkdown .editor h4,
+.milkdown .ProseMirror h4 {
+  color: #f5f5f5 !important;
+  font-size: 1.25rem !important;
+  font-weight: 600 !important;
+  line-height: 1.75rem !important;
+  margin-top: 1.25rem !important;
+  margin-bottom: 0.75rem !important;
+}
+
+.milkdown .editor h5,
+.milkdown .ProseMirror h5 {
+  color: #f5f5f5 !important;
+  font-size: 1.125rem !important;
+  font-weight: 600 !important;
+  line-height: 1.75rem !important;
+  margin-top: 1rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.milkdown .editor h6,
+.milkdown .ProseMirror h6 {
+  color: #f5f5f5 !important;
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  line-height: 1.5rem !important;
+  margin-top: 1rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.milkdown .editor p,
+.milkdown .ProseMirror p {
+  color: #e5e5e5 !important;
+  line-height: 1.7 !important;
+  margin-top: 0.75rem !important;
+  margin-bottom: 0.75rem !important;
+}
+
+.milkdown .editor a,
+.milkdown .ProseMirror a {
+  color: #60a5fa !important;
+  text-decoration: underline !important;
+  cursor: text !important;
+}
+
+.milkdown .editor a:hover,
+.milkdown .ProseMirror a:hover {
+  color: #93c5fd !important;
+}
+
+/* Code - Inline */
+.milkdown .editor code:not(pre code),
+.milkdown .ProseMirror code:not(pre code) {
+  background: #262626 !important;
+  color: #fbbf24 !important;
+  padding: 0.2em 0.4em !important;
+  border-radius: 3px !important;
+  font-size: 0.875em !important;
+}
+
+/* Dark theme inline code (explicit) */
+.dark .milkdown .editor code:not(pre code),
+.dark .milkdown .ProseMirror code:not(pre code) {
+  background: #262626 !important;
+  color: #fbbf24 !important;
+}
+
+/* Code blocks */
+.milkdown .editor pre,
+.milkdown .ProseMirror pre {
+  background: #0a0a0a !important;
+  border: 1px solid #262626 !important;
+  padding: 1rem !important;
+  overflow-x: auto !important;
+}
+
+/* Dark theme code blocks (explicit) */
+.dark .milkdown .editor pre,
+.dark .milkdown .ProseMirror pre {
+  background: #0a0a0a !important;
+  border: 1px solid #262626 !important;
+}
+
+.milkdown .editor pre code,
+.milkdown .ProseMirror pre code {
+  background: transparent !important;
+  color: #e5e5e5 !important;
+  padding: 0 !important;
+  font-size: 0.875rem !important;
+  line-height: 1.5 !important;
+  display: block !important;
+}
+
+/* Dark theme code block text (explicit) */
+.dark .milkdown .editor pre code,
+.dark .milkdown .ProseMirror pre code {
+  color: #e5e5e5 !important;
+}
+
+/* Lists */
+.milkdown ul,
+.milkdown ol {
+  color: #e5e5e5 !important;
+  padding-left: 2rem !important;
+  margin: 1rem 0 !important;
+}
+
+.milkdown ul {
+  list-style-type: disc !important;
+}
+
+.milkdown ol {
+  list-style-type: decimal !important;
+}
+
+.milkdown li {
+  color: #e5e5e5 !important;
+  margin: 0.5rem 0 !important;
+  display: list-item !important;
+}
+
+.milkdown li::marker {
+  color: #a3a3a3 !important;
+}
+
+/* Blockquote */
+.milkdown blockquote {
+  border-left: 4px solid #404040 !important;
+  color: #a3a3a3 !important;
+  padding-left: 1rem !important;
+  margin: 1rem 0 !important;
+  font-style: italic;
+}
+
+/* Tables */
+.milkdown table {
+  border-collapse: collapse !important;
+  border: 1px solid #262626 !important;
+  width: 100% !important;
+}
+
+.milkdown th,
+.milkdown td {
+  border: 1px solid #262626 !important;
+  padding: 0.75rem !important;
+  color: #e5e5e5 !important;
+}
+
+.milkdown th {
+  background: #262626 !important;
+  font-weight: 600 !important;
+}
+
+.milkdown tr:hover {
+  background: #1a1a1a !important;
+}
+
+/* Horizontal rule */
+.milkdown hr {
+  border: none !important;
+  border-top: 1px solid #404040 !important;
+  margin: 2rem 0 !important;
+}
+
+/* Task lists */
+.milkdown input[type="checkbox"] {
+  margin-right: 0.5rem !important;
+  accent-color: #60a5fa !important;
+}
+
+/* Selection */
+.milkdown ::selection {
+  background: #3b82f6 !important;
+  color: white !important;
+}
+
+/* Placeholder */
+.milkdown .ProseMirror-placeholder {
+  color: #525252 !important;
+}
+
+/* Focus */
+.milkdown .editor:focus {
+  outline: none !important;
+}
+
+/* Scrollbar */
+.milkdown::-webkit-scrollbar {
+  display: none !important;
+}
+
+/* Override Nord theme colors */
+.milkdown-theme-dark {
+  --nord0: #171717;
+  --nord1: #262626;
+  --nord2: #404040;
+  --nord3: #525252;
+  --nord4: #a3a3a3;
+  --nord5: #e5e5e5;
+  --nord6: #f5f5f5;
+  --nord8: #60a5fa;
+  --nord9: #93c5fd;
+  --nord10: #3b82f6;
+  --nord13: #fbbf24;
+  --nord14: #65d9af;
+  --nord15: #f87171;
+}
+
+/* Strong/Bold */
+.milkdown strong {
+  color: #f5f5f5 !important;
+  font-weight: 600 !important;
+}
+
+/* Emphasis/Italic */
+.milkdown em {
+  color: #e5e5e5 !important;
+  font-style: italic !important;
+}
+
+/* Strikethrough */
+.milkdown del {
+  color: #a3a3a3 !important;
+  text-decoration: line-through !important;
+}
+
+/* Prism Syntax Highlighting Overrides for Dark Theme */
+.milkdown .token.comment,
+.milkdown .token.prolog,
+.milkdown .token.doctype,
+.milkdown .token.cdata {
+  color: #6b7280 !important;
+}
+
+.milkdown .code-block-wrapper .token.punctuation,
+.dark .milkdown .code-block-wrapper .token.punctuation {
+  color: #9ca3af !important;
+}
+
+.milkdown .token.property,
+.milkdown .token.tag,
+.milkdown .token.boolean,
+.milkdown .token.number,
+.milkdown .token.constant,
+.milkdown .token.symbol,
+.milkdown .token.deleted {
+  color: #f87171 !important;
+}
+
+.milkdown .token.selector,
+.milkdown .token.attr-name,
+.milkdown .token.string,
+.milkdown .token.char,
+.milkdown .token.builtin,
+.milkdown .token.inserted {
+  color: #34d399 !important;
+}
+
+.milkdown .token.operator,
+.milkdown .token.entity,
+.milkdown .token.url,
+.milkdown .language-css .token.string,
+.milkdown .style .token.string {
+  color: #60a5fa !important;
+}
+
+.milkdown .token.atrule,
+.milkdown .token.attr-value,
+.milkdown .token.keyword {
+  color: #a78bfa !important;
+}
+
+.milkdown .token.function,
+.milkdown .token.class-name {
+  color: #fbbf24 !important;
+}
+
+.milkdown .token.regex,
+.milkdown .token.important,
+.milkdown .token.variable {
+  color: #fb923c !important;
+}
+
+/* Code block enhancements */
+.milkdown .code-fence {
+  position: relative;
+  margin: 1.5rem 0;
+}
+
+.milkdown .code-fence-widget {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.milkdown .code-fence:hover .code-fence-widget {
+  opacity: 1;
+}
+
+.milkdown .code-fence-copy-button,
+.dark .milkdown .code-fence-copy-button {
+  padding: 0.25rem 0.5rem;
+  background: #374151;
+  color: #d1d5db;
+  border: 1px solid #4b5563;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-size: 0.75rem;
+  transition: all 0.2s;
+}
+
+.milkdown .code-fence-copy-button:hover,
+.dark .milkdown .code-fence-copy-button:hover {
+  background: #4b5563;
+  color: #f3f4f6;
+}
+
+.milkdown .code-fence-copy-button.copied,
+.dark .milkdown .code-fence-copy-button.copied {
+  background: #10b981;
+  border-color: #10b981;
+}
+
+/* Line numbers for code blocks */
+.milkdown pre[class*="language-"] {
+  counter-reset: line-number;
+  padding-left: 3.5rem;
+}
+
+.milkdown pre[class*="language-"] .line::before {
+  counter-increment: line-number;
+  content: counter(line-number);
+  position: absolute;
+  left: 0;
+  width: 3rem;
+  text-align: right;
+  padding-right: 1rem;
+  color: #6b7280;
+  user-select: none;
+}
+
+.milkdown pre[class*="language-"] .line {
+  position: relative;
+  display: block;
+}
+
+/* Marker/Highlight styles */
+.milkdown .editor mark,
+.milkdown .ProseMirror mark {
+  padding: 0.1em 0.2em !important;
+  border-radius: 0.2em !important;
+  color: #171717 !important;
+  font-weight: 500 !important;
+}
+
+/* Dark theme compatible marker colors */
+.milkdown-theme-dark .editor mark,
+.milkdown-theme-dark .ProseMirror mark {
+  box-shadow: 0 0 0 1px rgba(255, 255, 0, 0.2) !important;
+}
+
+/* Text color spans */
+.milkdown .editor span[data-text-color],
+.milkdown .ProseMirror span[data-text-color] {
+  /* color is driven by the inline style; just ensure no unwanted overrides */
+  font-weight: inherit;
+}
+
+/* Color Picker Tooltip */
+.milkdown-color-picker {
+  position: absolute;
+  z-index: 1000;
+  background: #262626;
+  border: 1px solid #404040;
+  border-radius: 6px;
+  padding: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  pointer-events: all;
+}
+
+.milkdown-color-picker input[type="color"] {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background: transparent;
+}
+
+.milkdown-color-picker input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+.milkdown-color-picker input[type="color"]::-webkit-color-swatch {
+  border: 2px solid #404040;
+  border-radius: 4px;
+}
+
+.milkdown-color-picker-close {
+  background: transparent;
+  border: none;
+  color: #e5e5e5;
+  font-size: 24px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+  padding: 0;
+  flex-shrink: 0;
+  outline: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.milkdown-color-picker-close:hover {
+  background-color: #404040;
+}
+
+.milkdown-color-picker-close:active {
+  background-color: #525252;
+  transform: scale(0.95);
+}
+
+/* ── Code block wrapper (NodeView) ── */
+.code-block-wrapper {
+  position: relative;
+  margin: 1rem 0 !important;
+  border: 1px solid #262626;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.code-block-wrapper pre {
+  margin: 0 !important;
+  border: none !important;
+  border-radius: 0 !important;
+}
+
+.code-block-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 12px;
+  background: #1a1a1a;
+  border-bottom: 1px solid #262626;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.code-block-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.code-block-lang-label {
+  color: #737373;
+  font-size: 0.75rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 3px;
+  transition: all 0.15s;
+}
+
+.code-block-lang-label:hover {
+  color: #a3a3a3;
+  background: #262626;
+}
+
+.code-block-lang-select {
+  color: #e5e5e5;
+  font-size: 0.75rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  background: #262626;
+  border: 1px solid #525252;
+  border-radius: 3px;
+  padding: 2px 6px;
+  outline: none;
+  cursor: pointer;
+}
+
+.code-block-lang-select:focus {
+  border-color: #60a5fa;
+}
+
+.code-block-copy-btn {
+  color: #737373;
+  font-size: 0.75rem;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  padding: 2px 10px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.code-block-copy-btn:hover {
+  color: #e5e5e5;
+  background: #333;
+  border-color: #525252;
+}
+
+.code-block-copy-btn.copied {
+  color: #34d399;
+  opacity: 1;
+}
+
+/* ── Task list styling ── */
+.milkdown li[data-item-type="task"] {
+  list-style: none !important;
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 8px !important;
+}
+
+.milkdown li[data-item-type="task"]::before {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  min-width: 16px;
+  border: 2px solid #525252;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.15s;
+  margin-top: 4px;
+}
+
+.milkdown li[data-item-type="task"]:hover::before {
+  border-color: #60a5fa;
+}
+
+.milkdown li[data-item-type="task"][data-checked="true"]::before {
+  background: #3b82f6;
+  border-color: #3b82f6;
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3e%3c/svg%3e");
+  background-size: 12px 12px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.milkdown li[data-item-type="task"][data-checked="true"] {
+  text-decoration: line-through !important;
+  opacity: 0.6 !important;
+  transition: opacity 0.15s !important;
+}
+
+.milkdown li[data-item-type="task"][data-checked="true"] > p,
+.milkdown li[data-item-type="task"][data-checked="true"] * {
+  text-decoration: line-through !important;
+}
+
+.milkdown li[data-item-type="task"] > p {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  flex: 1;
+  transition: opacity 0.15s;
+}
+
+/* ── Bottom padding for editor scrolling (fixes table at EOF) ── */
+.milkdown .editor,
+.milkdown .ProseMirror {
+  padding-bottom: 20vh !important;
+}
+/* ═══════════════════════════════════════════════════════════════ */
+/* ── LIGHT THEME OVERRIDES ──────────────────────────────────────  */
+/* ═══════════════════════════════════════════════════════════════ */
+
+.light .milkdown-editor-wrapper {
+  background: #ffffff !important;
+  color: #1a1a1a !important;
+}
+
+.light .milkdown .editor,
+.light .milkdown .ProseMirror {
+  color: #1a1a1a !important;
+}
+
+/* Light theme headings */
+.light .milkdown .editor h1,
+.light .milkdown .ProseMirror h1,
+.light .milkdown .editor h2,
+.light .milkdown .ProseMirror h2 {
+  color: #0a0a0a !important;
+  border-bottom-color: #e5e5e5 !important;
+}
+
+.light .milkdown .editor h3,
+.light .milkdown .ProseMirror h3,
+.light .milkdown .editor h4,
+.light .milkdown .ProseMirror h4,
+.light .milkdown .editor h5,
+.light .milkdown .ProseMirror h5,
+.light .milkdown .editor h6,
+.light .milkdown .ProseMirror h6 {
+  color: #0a0a0a !important;
+}
+
+/* Light theme text */
+.light .milkdown .editor p,
+.light .milkdown .ProseMirror p,
+.light .milkdown ul,
+.light .milkdown ol,
+.light .milkdown li {
+  color: #1a1a1a !important;
+}
+
+/* Light theme links */
+.light .milkdown .editor a,
+.light .milkdown .ProseMirror a {
+  color: #2563eb !important;
+}
+
+.light .milkdown .editor a:hover,
+.light .milkdown .ProseMirror a:hover {
+  color: #1d4ed8 !important;
+}
+
+/* Light theme inline code */
+.light .milkdown .editor code:not(pre code),
+.light .milkdown .ProseMirror code:not(pre code) {
+  background: #f5f5f5 !important;
+  color: #d73a49 !important;
+  border: 1px solid #e5e5e5 !important;
+}
+
+/* Light theme code blocks */
+.light .milkdown .editor pre,
+.light .milkdown .ProseMirror pre {
+  background: #f4f2ef !important;
+  border: 1px solid #e5e5e5 !important;
+}
+
+.light .milkdown .editor pre code,
+.light .milkdown .ProseMirror pre code {
+  color: #1a1a1a !important;
+}
+
+/* Light theme blockquotes */
+.light .milkdown blockquote {
+  border-left-color: #d4d4d4 !important;
+  color: #525252 !important;
+  background: #fafafa !important;
+}
+
+.light .milkdown blockquote p {
+  color: #525252 !important;
+}
+
+/* Light theme tables */
+.light .milkdown table {
+  border-color: #e5e5e5 !important;
+}
+
+.light .milkdown th,
+.light .milkdown td {
+  border-color: #e5e5e5 !important;
+  color: #1a1a1a !important;
+}
+
+.light .milkdown th {
+  background: #f5f5f5 !important;
+}
+
+.light .milkdown tr:nth-child(even) {
+  background: #fafafa !important;
+}
+
+/* Light theme hr */
+.light .milkdown hr {
+  border-color: #e5e5e5 !important;
+}
+
+/* Light theme strong/em */
+.light .milkdown strong {
+  color: #0a0a0a !important;
+}
+
+.light .milkdown em {
+  color: #404040 !important;
+}
+
+/* Light theme task lists */
+.light .milkdown li[data-item-type="task"]::before {
+  border-color: #a3a3a3 !important;
+}
+
+.light .milkdown li[data-item-type="task"]:hover::before {
+  border-color: #2563eb !important;
+}
+
+.light .milkdown li[data-item-type="task"][data-checked="true"]::before {
+  background: #2563eb !important;
+  border-color: #2563eb !important;
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3e%3c/svg%3e") !important;
+  background-size: 12px 12px !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+}
+
+/* Light theme code block copy button */
+.light .code-block-copy-btn {
+  color: #525252 !important;
+  background: #ffffff !important;
+  border-color: #d4d4d4 !important;
+}
+
+.light .code-block-copy-btn:hover {
+  color: #1a1a1a !important;
+  background: #f5f5f5 !important;
+  border-color: #a3a3a3 !important;
+}
+
+.light .code-block-copy-btn.copied {
+  color: #16a34a !important;
+}
+
+/* Light theme code fence */
+.light .milkdown .code-fence-copy-button {
+  background: #ffffff !important;
+  color: #525252 !important;
+  border-color: #d4d4d4 !important;
+}
+
+.light .milkdown .code-fence-copy-button:hover {
+  background: #f5f5f5 !important;
+  color: #1a1a1a !important;
+}
+
+.light .milkdown .code-fence-copy-button.copied {
+  background: #10b981 !important;
+  border-color: #10b981 !important;
+  color: #ffffff !important;
+}
+
+/* Prism Syntax Highlighting for Light Theme */
+.light .milkdown .code-block-wrapper .token.comment,
+.light .milkdown .code-block-wrapper .token.prolog,
+.light .milkdown .code-block-wrapper .token.doctype,
+.light .milkdown .code-block-wrapper .token.cdata {
+  color: #6a737d !important;
+  font-style: italic !important;
+}
+
+.light .milkdown .code-block-wrapper .token.punctuation {
+  color: #24292e !important;
+}
+
+.light .milkdown .code-block-wrapper .token.property,
+.light .milkdown .code-block-wrapper .token.tag,
+.light .milkdown .code-block-wrapper .token.boolean,
+.light .milkdown .code-block-wrapper .token.number,
+.light .milkdown .code-block-wrapper .token.constant,
+.light .milkdown .code-block-wrapper .token.symbol,
+.light .milkdown .code-block-wrapper .token.deleted {
+  color: #005cc5 !important;
+}
+
+.light .milkdown .code-block-wrapper .token.selector,
+.light .milkdown .code-block-wrapper .token.attr-name,
+.light .milkdown .code-block-wrapper .token.string,
+.light .milkdown .code-block-wrapper .token.char,
+.light .milkdown .code-block-wrapper .token.builtin,
+.light .milkdown .code-block-wrapper .token.inserted {
+  color: #22863a !important;
+}
+
+.light .milkdown .code-block-wrapper .token.operator,
+.light .milkdown .code-block-wrapper .token.entity,
+.light .milkdown .code-block-wrapper .token.url,
+.light .milkdown .code-block-wrapper .language-css .token.string,
+.light .milkdown .code-block-wrapper .style .token.string {
+  color: #0550ae !important;
+}
+
+.light .milkdown .code-block-wrapper .token.atrule,
+.light .milkdown .code-block-wrapper .token.attr-value,
+.light .milkdown .code-block-wrapper .token.keyword {
+  color: #0033b3 !important;
+}
+
+.light .milkdown .code-block-wrapper .token.function,
+.light .milkdown .code-block-wrapper .token.class-name {
+  color: #6f42c1 !important;
+}
+
+.light .milkdown .code-block-wrapper .token.regex,
+.light .milkdown .code-block-wrapper .token.important,
+.light .milkdown .code-block-wrapper .token.variable {
+  color: #e36209 !important;
+}
+
+.light .milkdown .code-block-wrapper .token.important,
+.light .milkdown .code-block-wrapper .token.bold {
+  font-weight: bold !important;
+}
+
+.light .milkdown .code-block-wrapper .token.italic {
+  font-style: italic !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════ */
+/* ── SEPIA THEME OVERRIDES ──────────────────────────────────────  */
+/* ═══════════════════════════════════════════════════════════════ */
+
+.light.sepia .milkdown-editor-wrapper {
+  background: #fdf6e3 !important;
+  color: #3e2f1c !important;
+}
+
+.light.sepia .milkdown .editor,
+.light.sepia .milkdown .ProseMirror {
+  color: #3e2f1c !important;
+}
+
+.light.sepia .milkdown .editor h1,
+.light.sepia .milkdown .ProseMirror h1,
+.light.sepia .milkdown .editor h2,
+.light.sepia .milkdown .ProseMirror h2,
+.light.sepia .milkdown .editor h3,
+.light.sepia .milkdown .ProseMirror h3,
+.light.sepia .milkdown .editor h4,
+.light.sepia .milkdown .ProseMirror h4,
+.light.sepia .milkdown .editor h5,
+.light.sepia .milkdown .ProseMirror h5,
+.light.sepia .milkdown .editor h6,
+.light.sepia .milkdown .ProseMirror h6 {
+  color: #2c1f0f !important;
+  border-bottom-color: #cbb99a !important;
+}
+
+.light.sepia .milkdown .editor p,
+.light.sepia .milkdown .ProseMirror p,
+.light.sepia .milkdown ul,
+.light.sepia .milkdown ol,
+.light.sepia .milkdown li {
+  color: #3e2f1c !important;
+}
+
+.light.sepia .milkdown .editor a,
+.light.sepia .milkdown .ProseMirror a {
+  color: #b5651d !important;
+}
+
+.light.sepia .milkdown .editor a:hover,
+.light.sepia .milkdown .ProseMirror a:hover {
+  color: #9a5016 !important;
+}
+
+.light.sepia .milkdown .editor code:not(pre code),
+.light.sepia .milkdown .ProseMirror code:not(pre code) {
+  background: #f0e4c8 !important;
+  color: #7a3500 !important;
+  border-color: #cbb99a !important;
+}
+
+.light.sepia .milkdown .editor pre,
+.light.sepia .milkdown .ProseMirror pre {
+  background: #ede0c4 !important;
+  border-color: #cbb99a !important;
+}
+
+.light.sepia .milkdown .editor pre code,
+.light.sepia .milkdown .ProseMirror pre code {
+  color: #3e2f1c !important;
+}
+
+.light.sepia .milkdown blockquote {
+  border-left-color: #b5651d !important;
+  color: #7a5c3a !important;
+  background: #faf0d0 !important;
+}
+
+.light.sepia .milkdown table {
+  border-color: #cbb99a !important;
+}
+
+.light.sepia .milkdown th,
+.light.sepia .milkdown td {
+  border-color: #cbb99a !important;
+  color: #3e2f1c !important;
+}
+
+.light.sepia .milkdown th {
+  background: #f0e4c8 !important;
+}
+
+.light.sepia .milkdown tr:nth-child(even) {
+  background: #faf3e0 !important;
+}
+
+.light.sepia .milkdown hr {
+  border-color: #cbb99a !important;
+}
+
+.light.sepia .milkdown strong {
+  color: #2c1f0f !important;
+}
+
+.light.sepia .milkdown .ProseMirror-placeholder {
+  color: #b09870 !important;
+}
+
+.light.sepia .code-block-header {
+  background: #ede0c4 !important;
+  border-bottom-color: #cbb99a !important;
+}
+
+.light.sepia .code-block-lang-label {
+  color: #7a5c3a !important;
+}
+
+.light.sepia .code-block-copy-btn {
+  color: #7a5c3a !important;
+}
+
+.light.sepia .code-block-copy-btn:hover {
+  color: #3e2f1c !important;
+  background: #f0e4c8 !important;
+  border-color: #cbb99a !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════ */
+/* ── NORD THEME OVERRIDES ───────────────────────────────────────  */
+/* ═══════════════════════════════════════════════════════════════ */
+
+.dark.nord .milkdown-editor-wrapper {
+  background: #3b4252 !important;
+  color: #eceff4 !important;
+}
+
+.dark.nord .milkdown .editor,
+.dark.nord .milkdown .ProseMirror {
+  color: #eceff4 !important;
+}
+
+.dark.nord .milkdown .editor h1,
+.dark.nord .milkdown .ProseMirror h1,
+.dark.nord .milkdown .editor h2,
+.dark.nord .milkdown .ProseMirror h2,
+.dark.nord .milkdown .editor h3,
+.dark.nord .milkdown .ProseMirror h3,
+.dark.nord .milkdown .editor h4,
+.dark.nord .milkdown .ProseMirror h4,
+.dark.nord .milkdown .editor h5,
+.dark.nord .milkdown .ProseMirror h5,
+.dark.nord .milkdown .editor h6,
+.dark.nord .milkdown .ProseMirror h6 {
+  color: #eceff4 !important;
+  border-bottom-color: #4c566a !important;
+}
+
+.dark.nord .milkdown .editor p,
+.dark.nord .milkdown .ProseMirror p,
+.dark.nord .milkdown ul,
+.dark.nord .milkdown ol,
+.dark.nord .milkdown li {
+  color: #d8dee9 !important;
+}
+
+.dark.nord .milkdown .editor a,
+.dark.nord .milkdown .ProseMirror a {
+  color: #88c0d0 !important;
+}
+
+.dark.nord .milkdown .editor a:hover,
+.dark.nord .milkdown .ProseMirror a:hover {
+  color: #8fbcbb !important;
+}
+
+.dark.nord .milkdown .editor code:not(pre code),
+.dark.nord .milkdown .ProseMirror code:not(pre code) {
+  background: #434c5e !important;
+  color: #ebcb8b !important;
+}
+
+.dark.nord .milkdown .editor pre,
+.dark.nord .milkdown .ProseMirror pre {
+  background: #2e3440 !important;
+  border-color: #4c566a !important;
+}
+
+.dark.nord .milkdown .editor pre code,
+.dark.nord .milkdown .ProseMirror pre code {
+  color: #d8dee9 !important;
+}
+
+.dark.nord .milkdown blockquote {
+  border-left-color: #81a1c1 !important;
+  color: #9199a6 !important;
+}
+
+.dark.nord .milkdown table {
+  border-color: #4c566a !important;
+}
+
+.dark.nord .milkdown th,
+.dark.nord .milkdown td {
+  border-color: #4c566a !important;
+  color: #d8dee9 !important;
+}
+
+.dark.nord .milkdown th {
+  background: #434c5e !important;
+}
+
+.dark.nord .milkdown tr:hover {
+  background: #3b4252 !important;
+}
+
+.dark.nord .milkdown hr {
+  border-color: #4c566a !important;
+}
+
+.dark.nord .milkdown strong {
+  color: #eceff4 !important;
+}
+
+.dark.nord .milkdown .ProseMirror-placeholder {
+  color: #9199a6 !important;
+}
+
+.dark.nord .code-block-header {
+  background: #2e3440 !important;
+  border-bottom-color: #4c566a !important;
+}
+
+.dark.nord .code-block-copy-btn:hover {
+  background: #434c5e !important;
+  border-color: #4c566a !important;
+}
+
+/* Nord syntax tokens */
+.dark.nord .milkdown .code-block-wrapper .token.comment {
+  color: #616e88 !important;
+}
+.dark.nord .milkdown .code-block-wrapper .token.property,
+.dark.nord .milkdown .code-block-wrapper .token.number,
+.dark.nord .milkdown .code-block-wrapper .token.boolean {
+  color: #b48ead !important;
+}
+.dark.nord .milkdown .code-block-wrapper .token.string,
+.dark.nord .milkdown .code-block-wrapper .token.inserted {
+  color: #a3be8c !important;
+}
+.dark.nord .milkdown .code-block-wrapper .token.keyword,
+.dark.nord .milkdown .code-block-wrapper .token.attr-value {
+  color: #81a1c1 !important;
+}
+.dark.nord .milkdown .code-block-wrapper .token.function,
+.dark.nord .milkdown .code-block-wrapper .token.class-name {
+  color: #88c0d0 !important;
+}
+.dark.nord .milkdown .code-block-wrapper .token.operator {
+  color: #81a1c1 !important;
+}
+.dark.nord .milkdown .code-block-wrapper .token.variable {
+  color: #d8dee9 !important;
+}
+.dark.nord .milkdown .code-block-wrapper .token.punctuation {
+  color: #eceff4 !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════ */
+/* ── DRACULA THEME OVERRIDES ────────────────────────────────────  */
+/* ═══════════════════════════════════════════════════════════════ */
+
+.dark.dracula .milkdown-editor-wrapper {
+  background: #282a36 !important;
+  color: #f8f8f2 !important;
+}
+
+.dark.dracula .milkdown .editor,
+.dark.dracula .milkdown .ProseMirror {
+  color: #f8f8f2 !important;
+}
+
+.dark.dracula .milkdown .editor h1,
+.dark.dracula .milkdown .ProseMirror h1,
+.dark.dracula .milkdown .editor h2,
+.dark.dracula .milkdown .ProseMirror h2,
+.dark.dracula .milkdown .editor h3,
+.dark.dracula .milkdown .ProseMirror h3,
+.dark.dracula .milkdown .editor h4,
+.dark.dracula .milkdown .ProseMirror h4,
+.dark.dracula .milkdown .editor h5,
+.dark.dracula .milkdown .ProseMirror h5,
+.dark.dracula .milkdown .editor h6,
+.dark.dracula .milkdown .ProseMirror h6 {
+  color: #f8f8f2 !important;
+  border-bottom-color: #44475a !important;
+}
+
+.dark.dracula .milkdown .editor p,
+.dark.dracula .milkdown .ProseMirror p,
+.dark.dracula .milkdown ul,
+.dark.dracula .milkdown ol,
+.dark.dracula .milkdown li {
+  color: #f8f8f2 !important;
+}
+
+.dark.dracula .milkdown .editor a,
+.dark.dracula .milkdown .ProseMirror a {
+  color: #8be9fd !important;
+}
+
+.dark.dracula .milkdown .editor a:hover,
+.dark.dracula .milkdown .ProseMirror a:hover {
+  color: #80d9f0 !important;
+}
+
+.dark.dracula .milkdown .editor code:not(pre code),
+.dark.dracula .milkdown .ProseMirror code:not(pre code) {
+  background: #44475a !important;
+  color: #ffb86c !important;
+}
+
+.dark.dracula .milkdown .editor pre,
+.dark.dracula .milkdown .ProseMirror pre {
+  background: #1e1f29 !important;
+  border-color: #44475a !important;
+}
+
+.dark.dracula .milkdown .editor pre code,
+.dark.dracula .milkdown .ProseMirror pre code {
+  color: #f8f8f2 !important;
+}
+
+.dark.dracula .milkdown blockquote {
+  border-left-color: #6272a4 !important;
+  color: #6272a4 !important;
+}
+
+.dark.dracula .milkdown table {
+  border-color: #44475a !important;
+}
+
+.dark.dracula .milkdown th,
+.dark.dracula .milkdown td {
+  border-color: #44475a !important;
+  color: #f8f8f2 !important;
+}
+
+.dark.dracula .milkdown th {
+  background: #44475a !important;
+}
+
+.dark.dracula .milkdown tr:hover {
+  background: #313342 !important;
+}
+
+.dark.dracula .milkdown hr {
+  border-color: #44475a !important;
+}
+
+.dark.dracula .milkdown strong {
+  color: #f8f8f2 !important;
+}
+
+.dark.dracula .milkdown .ProseMirror-placeholder {
+  color: #6272a4 !important;
+}
+
+.dark.dracula .code-block-header {
+  background: #1e1f29 !important;
+  border-bottom-color: #44475a !important;
+}
+
+.dark.dracula .code-block-copy-btn:hover {
+  background: #44475a !important;
+  border-color: #6272a4 !important;
+}
+
+/* Dracula syntax tokens */
+.dark.dracula .milkdown .code-block-wrapper .token.comment {
+  color: #6272a4 !important;
+}
+.dark.dracula .milkdown .code-block-wrapper .token.string,
+.dark.dracula .milkdown .code-block-wrapper .token.inserted {
+  color: #f1fa8c !important;
+}
+.dark.dracula .milkdown .code-block-wrapper .token.number,
+.dark.dracula .milkdown .code-block-wrapper .token.boolean {
+  color: #bd93f9 !important;
+}
+.dark.dracula .milkdown .code-block-wrapper .token.keyword {
+  color: #ff79c6 !important;
+}
+.dark.dracula .milkdown .code-block-wrapper .token.function,
+.dark.dracula .milkdown .code-block-wrapper .token.class-name {
+  color: #50fa7b !important;
+}
+.dark.dracula .milkdown .code-block-wrapper .token.operator {
+  color: #ff79c6 !important;
+}
+.dark.dracula .milkdown .code-block-wrapper .token.variable {
+  color: #f8f8f2 !important;
+}
+.dark.dracula .milkdown .code-block-wrapper .token.property {
+  color: #66d9e8 !important;
+}
+.dark.dracula .milkdown .code-block-wrapper .token.punctuation {
+  color: #f8f8f2 !important;
+}
+.dark.dracula .milkdown .code-block-wrapper .token.attr-name {
+  color: #50fa7b !important;
+}
+.dark.dracula .milkdown .code-block-wrapper .token.attr-value {
+  color: #f1fa8c !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════ */
+/* ── CATPPUCCIN MOCHA THEME OVERRIDES ───────────────────────────  */
+/* ═══════════════════════════════════════════════════════════════ */
+
+.dark.catppuccin .milkdown-editor-wrapper {
+  background: #313244 !important;
+  color: #cdd6f4 !important;
+}
+
+.dark.catppuccin .milkdown .editor,
+.dark.catppuccin .milkdown .ProseMirror {
+  color: #cdd6f4 !important;
+}
+
+.dark.catppuccin .milkdown .editor h1,
+.dark.catppuccin .milkdown .ProseMirror h1,
+.dark.catppuccin .milkdown .editor h2,
+.dark.catppuccin .milkdown .ProseMirror h2,
+.dark.catppuccin .milkdown .editor h3,
+.dark.catppuccin .milkdown .ProseMirror h3,
+.dark.catppuccin .milkdown .editor h4,
+.dark.catppuccin .milkdown .ProseMirror h4,
+.dark.catppuccin .milkdown .editor h5,
+.dark.catppuccin .milkdown .ProseMirror h5,
+.dark.catppuccin .milkdown .editor h6,
+.dark.catppuccin .milkdown .ProseMirror h6 {
+  color: #cdd6f4 !important;
+  border-bottom-color: #585b70 !important;
+}
+
+.dark.catppuccin .milkdown .editor p,
+.dark.catppuccin .milkdown .ProseMirror p,
+.dark.catppuccin .milkdown ul,
+.dark.catppuccin .milkdown ol,
+.dark.catppuccin .milkdown li {
+  color: #cdd6f4 !important;
+}
+
+.dark.catppuccin .milkdown .editor a,
+.dark.catppuccin .milkdown .ProseMirror a {
+  color: #89dceb !important;
+}
+
+.dark.catppuccin .milkdown .editor a:hover,
+.dark.catppuccin .milkdown .ProseMirror a:hover {
+  color: #74c7ec !important;
+}
+
+.dark.catppuccin .milkdown .editor code:not(pre code),
+.dark.catppuccin .milkdown .ProseMirror code:not(pre code) {
+  background: #45475a !important;
+  color: #f9e2af !important;
+}
+
+.dark.catppuccin .milkdown .editor pre,
+.dark.catppuccin .milkdown .ProseMirror pre {
+  background: #1e1e2e !important;
+  border-color: #585b70 !important;
+}
+
+.dark.catppuccin .milkdown .editor pre code,
+.dark.catppuccin .milkdown .ProseMirror pre code {
+  color: #cdd6f4 !important;
+}
+
+.dark.catppuccin .milkdown blockquote {
+  border-left-color: #cba6f7 !important;
+  color: #bac2de !important;
+}
+
+.dark.catppuccin .milkdown table {
+  border-color: #585b70 !important;
+}
+
+.dark.catppuccin .milkdown th,
+.dark.catppuccin .milkdown td {
+  border-color: #585b70 !important;
+  color: #cdd6f4 !important;
+}
+
+.dark.catppuccin .milkdown th {
+  background: #45475a !important;
+}
+
+.dark.catppuccin .milkdown tr:hover {
+  background: #313244 !important;
+}
+
+.dark.catppuccin .milkdown hr {
+  border-color: #585b70 !important;
+}
+
+.dark.catppuccin .milkdown strong {
+  color: #cdd6f4 !important;
+}
+
+.dark.catppuccin .milkdown .ProseMirror-placeholder {
+  color: #6c7086 !important;
+}
+
+.dark.catppuccin .code-block-header {
+  background: #1e1e2e !important;
+  border-bottom-color: #585b70 !important;
+}
+
+.dark.catppuccin .code-block-copy-btn:hover {
+  background: #45475a !important;
+  border-color: #585b70 !important;
+}
+
+/* Catppuccin Mocha syntax tokens */
+.dark.catppuccin .milkdown .code-block-wrapper .token.comment {
+  color: #6c7086 !important;
+}
+.dark.catppuccin .milkdown .code-block-wrapper .token.string,
+.dark.catppuccin .milkdown .code-block-wrapper .token.inserted {
+  color: #a6e3a1 !important;
+}
+.dark.catppuccin .milkdown .code-block-wrapper .token.number,
+.dark.catppuccin .milkdown .code-block-wrapper .token.boolean {
+  color: #fab387 !important;
+}
+.dark.catppuccin .milkdown .code-block-wrapper .token.keyword {
+  color: #cba6f7 !important;
+}
+.dark.catppuccin .milkdown .code-block-wrapper .token.function,
+.dark.catppuccin .milkdown .code-block-wrapper .token.class-name {
+  color: #89b4fa !important;
+}
+.dark.catppuccin .milkdown .code-block-wrapper .token.operator {
+  color: #89dceb !important;
+}
+.dark.catppuccin .milkdown .code-block-wrapper .token.variable {
+  color: #cdd6f4 !important;
+}
+.dark.catppuccin .milkdown .code-block-wrapper .token.property {
+  color: #f38ba8 !important;
+}
+.dark.catppuccin .milkdown .code-block-wrapper .token.punctuation {
+  color: #cdd6f4 !important;
+}
+.dark.catppuccin .milkdown .code-block-wrapper .token.attr-name {
+  color: #a6e3a1 !important;
+}
+.dark.catppuccin .milkdown .code-block-wrapper .token.attr-value {
+  color: #a6e3a1 !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════ */
+/* ── GITHUB THEME OVERRIDES ─────────────────────────────────────  */
+/* ═══════════════════════════════════════════════════════════════ */
+
+.light.github .milkdown-editor-wrapper {
+  background: #ffffff !important;
+  color: #1f2328 !important;
+}
+
+.light.github .milkdown .editor,
+.light.github .milkdown .ProseMirror {
+  color: #1f2328 !important;
+}
+
+.light.github .milkdown .editor h1,
+.light.github .milkdown .ProseMirror h1,
+.light.github .milkdown .editor h2,
+.light.github .milkdown .ProseMirror h2,
+.light.github .milkdown .editor h3,
+.light.github .milkdown .ProseMirror h3,
+.light.github .milkdown .editor h4,
+.light.github .milkdown .ProseMirror h4,
+.light.github .milkdown .editor h5,
+.light.github .milkdown .ProseMirror h5,
+.light.github .milkdown .editor h6,
+.light.github .milkdown .ProseMirror h6 {
+  color: #1f2328 !important;
+  border-bottom-color: #d0d7de !important;
+}
+
+.light.github .milkdown .editor p,
+.light.github .milkdown .ProseMirror p,
+.light.github .milkdown ul,
+.light.github .milkdown ol,
+.light.github .milkdown li {
+  color: #1f2328 !important;
+}
+
+.light.github .milkdown .editor a,
+.light.github .milkdown .ProseMirror a {
+  color: #0969da !important;
+}
+
+.light.github .milkdown .editor a:hover,
+.light.github .milkdown .ProseMirror a:hover {
+  color: #0756ba !important;
+}
+
+.light.github .milkdown .editor code:not(pre code),
+.light.github .milkdown .ProseMirror code:not(pre code) {
+  background: #f6f8fa !important;
+  color: #d73a49 !important;
+  border: 1px solid #d0d7de !important;
+}
+
+.light.github .milkdown .editor pre,
+.light.github .milkdown .ProseMirror pre {
+  background: #f6f8fa !important;
+  border-color: #d0d7de !important;
+}
+
+.light.github .milkdown .editor pre code,
+.light.github .milkdown .ProseMirror pre code {
+  color: #1f2328 !important;
+}
+
+.light.github .milkdown blockquote {
+  border-left-color: #d0d7de !important;
+  color: #656d76 !important;
+  background: #f6f8fa !important;
+}
+
+.light.github .milkdown table {
+  border-color: #d0d7de !important;
+}
+
+.light.github .milkdown th,
+.light.github .milkdown td {
+  border-color: #d0d7de !important;
+  color: #1f2328 !important;
+}
+
+.light.github .milkdown th {
+  background: #f6f8fa !important;
+}
+
+.light.github .milkdown tr:nth-child(even) {
+  background: #f6f8fa !important;
+}
+
+.light.github .milkdown hr {
+  border-color: #d0d7de !important;
+}
+
+.light.github .milkdown strong {
+  color: #1f2328 !important;
+}
+
+.light.github .milkdown .ProseMirror-placeholder {
+  color: #9198a1 !important;
+}
+
+.light.github .code-block-header {
+  background: #f6f8fa !important;
+  border-bottom-color: #d0d7de !important;
+}
+
+.light.github .code-block-lang-label {
+  color: #656d76 !important;
+}
+
+.light.github .code-block-copy-btn {
+  color: #656d76 !important;
+}
+
+.light.github .code-block-copy-btn:hover {
+  color: #1f2328 !important;
+  background: #eaeef2 !important;
+  border-color: #d0d7de !important;
+}
+
+/* GitHub syntax tokens (GitHub Light) */
+.light.github .milkdown .code-block-wrapper .token.comment {
+  color: #6e7781 !important;
+  font-style: italic !important;
+}
+.light.github .milkdown .code-block-wrapper .token.punctuation {
+  color: #24292f !important;
+}
+.light.github .milkdown .code-block-wrapper .token.string,
+.light.github .milkdown .code-block-wrapper .token.inserted {
+  color: #0a3069 !important;
+}
+.light.github .milkdown .code-block-wrapper .token.number,
+.light.github .milkdown .code-block-wrapper .token.boolean {
+  color: #0550ae !important;
+}
+.light.github .milkdown .code-block-wrapper .token.keyword {
+  color: #cf222e !important;
+}
+.light.github .milkdown .code-block-wrapper .token.function,
+.light.github .milkdown .code-block-wrapper .token.class-name {
+  color: #8250df !important;
+}
+.light.github .milkdown .code-block-wrapper .token.operator {
+  color: #0550ae !important;
+}
+.light.github .milkdown .code-block-wrapper .token.variable {
+  color: #953800 !important;
+}
+.light.github .milkdown .code-block-wrapper .token.property {
+  color: #0550ae !important;
+}
+.light.github .milkdown .code-block-wrapper .token.attr-name {
+  color: #116329 !important;
+}
+.light.github .milkdown .code-block-wrapper .token.attr-value {
+  color: #0a3069 !important;
+}
+.light.github .milkdown .code-block-wrapper .token.deleted {
+  color: #82071e !important;
+}
+.light.github .milkdown .code-block-wrapper .token.tag {
+  color: #116329 !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════ */
+/* ── GITHUB DARK THEME OVERRIDES ────────────────────────────────  */
+/* ═══════════════════════════════════════════════════════════════ */
+
+.dark.github-dark .milkdown-editor-wrapper {
+  background: #161b22 !important;
+  color: #e6edf3 !important;
+}
+
+.dark.github-dark .milkdown .editor,
+.dark.github-dark .milkdown .ProseMirror {
+  color: #e6edf3 !important;
+}
+
+.dark.github-dark .milkdown .editor h1,
+.dark.github-dark .milkdown .ProseMirror h1,
+.dark.github-dark .milkdown .editor h2,
+.dark.github-dark .milkdown .ProseMirror h2,
+.dark.github-dark .milkdown .editor h3,
+.dark.github-dark .milkdown .ProseMirror h3,
+.dark.github-dark .milkdown .editor h4,
+.dark.github-dark .milkdown .ProseMirror h4,
+.dark.github-dark .milkdown .editor h5,
+.dark.github-dark .milkdown .ProseMirror h5,
+.dark.github-dark .milkdown .editor h6,
+.dark.github-dark .milkdown .ProseMirror h6 {
+  color: #e6edf3 !important;
+  border-bottom-color: #30363d !important;
+}
+
+.dark.github-dark .milkdown .editor p,
+.dark.github-dark .milkdown .ProseMirror p,
+.dark.github-dark .milkdown ul,
+.dark.github-dark .milkdown ol,
+.dark.github-dark .milkdown li {
+  color: #e6edf3 !important;
+}
+
+.dark.github-dark .milkdown .editor a,
+.dark.github-dark .milkdown .ProseMirror a {
+  color: #58a6ff !important;
+}
+
+.dark.github-dark .milkdown .editor a:hover,
+.dark.github-dark .milkdown .ProseMirror a:hover {
+  color: #79c0ff !important;
+}
+
+.dark.github-dark .milkdown .editor code:not(pre code),
+.dark.github-dark .milkdown .ProseMirror code:not(pre code) {
+  background: #161b22 !important;
+  color: #ff7b72 !important;
+  border: 1px solid #30363d !important;
+}
+
+.dark.github-dark .milkdown .editor pre,
+.dark.github-dark .milkdown .ProseMirror pre {
+  background: #0d1117 !important;
+  border-color: #30363d !important;
+}
+
+.dark.github-dark .milkdown .editor pre code,
+.dark.github-dark .milkdown .ProseMirror pre code {
+  color: #e6edf3 !important;
+}
+
+.dark.github-dark .milkdown blockquote {
+  border-left-color: #3d444d !important;
+  color: #8b949e !important;
+}
+
+.dark.github-dark .milkdown table {
+  border-color: #30363d !important;
+}
+
+.dark.github-dark .milkdown th,
+.dark.github-dark .milkdown td {
+  border-color: #30363d !important;
+  color: #e6edf3 !important;
+}
+
+.dark.github-dark .milkdown th {
+  background: #21262d !important;
+}
+
+.dark.github-dark .milkdown tr:hover {
+  background: #161b22 !important;
+}
+
+.dark.github-dark .milkdown hr {
+  border-color: #30363d !important;
+}
+
+.dark.github-dark .milkdown strong {
+  color: #e6edf3 !important;
+}
+
+.dark.github-dark .milkdown .ProseMirror-placeholder {
+  color: #484f58 !important;
+}
+
+.dark.github-dark .code-block-header {
+  background: #0d1117 !important;
+  border-bottom-color: #30363d !important;
+}
+
+.dark.github-dark .code-block-copy-btn:hover {
+  background: #21262d !important;
+  border-color: #30363d !important;
+}
+
+/* GitHub Dark syntax tokens */
+.dark.github-dark .milkdown .code-block-wrapper .token.comment {
+  color: #8b949e !important;
+  font-style: italic !important;
+}
+.dark.github-dark .milkdown .code-block-wrapper .token.punctuation {
+  color: #e6edf3 !important;
+}
+.dark.github-dark .milkdown .code-block-wrapper .token.string,
+.dark.github-dark .milkdown .code-block-wrapper .token.inserted {
+  color: #a5d6ff !important;
+}
+.dark.github-dark .milkdown .code-block-wrapper .token.number,
+.dark.github-dark .milkdown .code-block-wrapper .token.boolean {
+  color: #79c0ff !important;
+}
+.dark.github-dark .milkdown .code-block-wrapper .token.keyword {
+  color: #ff7b72 !important;
+}
+.dark.github-dark .milkdown .code-block-wrapper .token.function,
+.dark.github-dark .milkdown .code-block-wrapper .token.class-name {
+  color: #d2a8ff !important;
+}
+.dark.github-dark .milkdown .code-block-wrapper .token.operator {
+  color: #79c0ff !important;
+}
+.dark.github-dark .milkdown .code-block-wrapper .token.variable {
+  color: #ffa657 !important;
+}
+.dark.github-dark .milkdown .code-block-wrapper .token.property {
+  color: #79c0ff !important;
+}
+.dark.github-dark .milkdown .code-block-wrapper .token.attr-name {
+  color: #7ee787 !important;
+}
+.dark.github-dark .milkdown .code-block-wrapper .token.attr-value {
+  color: #a5d6ff !important;
+}
+.dark.github-dark .milkdown .code-block-wrapper .token.deleted {
+  color: #ffa198 !important;
+}
+.dark.github-dark .milkdown .code-block-wrapper .token.tag {
+  color: #7ee787 !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════ */
+/* ── NIGHT OWL THEME OVERRIDES ──────────────────────────────────  */
+/* ═══════════════════════════════════════════════════════════════ */
+
+.dark.nightowl .milkdown-editor-wrapper {
+  background: #01223a !important;
+  color: #d6deeb !important;
+}
+
+.dark.nightowl .milkdown .editor,
+.dark.nightowl .milkdown .ProseMirror {
+  color: #d6deeb !important;
+}
+
+.dark.nightowl .milkdown .editor h1,
+.dark.nightowl .milkdown .ProseMirror h1,
+.dark.nightowl .milkdown .editor h2,
+.dark.nightowl .milkdown .ProseMirror h2,
+.dark.nightowl .milkdown .editor h3,
+.dark.nightowl .milkdown .ProseMirror h3,
+.dark.nightowl .milkdown .editor h4,
+.dark.nightowl .milkdown .ProseMirror h4,
+.dark.nightowl .milkdown .editor h5,
+.dark.nightowl .milkdown .ProseMirror h5,
+.dark.nightowl .milkdown .editor h6,
+.dark.nightowl .milkdown .ProseMirror h6 {
+  color: #c5e4fd !important;
+  border-bottom-color: #1d3b53 !important;
+}
+
+.dark.nightowl .milkdown .editor p,
+.dark.nightowl .milkdown .ProseMirror p,
+.dark.nightowl .milkdown ul,
+.dark.nightowl .milkdown ol,
+.dark.nightowl .milkdown li {
+  color: #d6deeb !important;
+}
+
+.dark.nightowl .milkdown .editor a,
+.dark.nightowl .milkdown .ProseMirror a {
+  color: #7fdbca !important;
+}
+
+.dark.nightowl .milkdown .editor a:hover,
+.dark.nightowl .milkdown .ProseMirror a:hover {
+  color: #9eebd9 !important;
+}
+
+.dark.nightowl .milkdown .editor code:not(pre code),
+.dark.nightowl .milkdown .ProseMirror code:not(pre code) {
+  background: #0d2a45 !important;
+  color: #f78c6c !important;
+}
+
+.dark.nightowl .milkdown .editor pre,
+.dark.nightowl .milkdown .ProseMirror pre {
+  background: #011627 !important;
+  border-color: #1d3b53 !important;
+}
+
+.dark.nightowl .milkdown .editor pre code,
+.dark.nightowl .milkdown .ProseMirror pre code {
+  color: #d6deeb !important;
+}
+
+.dark.nightowl .milkdown blockquote {
+  border-left-color: #7fdbca !important;
+  color: #a8b2ca !important;
+}
+
+.dark.nightowl .milkdown table {
+  border-color: #1d3b53 !important;
+}
+
+.dark.nightowl .milkdown th,
+.dark.nightowl .milkdown td {
+  border-color: #1d3b53 !important;
+  color: #d6deeb !important;
+}
+
+.dark.nightowl .milkdown th {
+  background: #0d2a45 !important;
+}
+
+.dark.nightowl .milkdown tr:hover {
+  background: #01223a !important;
+}
+
+.dark.nightowl .milkdown hr {
+  border-color: #1d3b53 !important;
+}
+
+.dark.nightowl .milkdown strong {
+  color: #d6deeb !important;
+}
+
+.dark.nightowl .milkdown .ProseMirror-placeholder {
+  color: #637777 !important;
+}
+
+.dark.nightowl .code-block-header {
+  background: #011627 !important;
+  border-bottom-color: #1d3b53 !important;
+}
+
+.dark.nightowl .code-block-copy-btn:hover {
+  background: #0d2a45 !important;
+  border-color: #1d3b53 !important;
+}
+
+/* Night Owl syntax tokens */
+.dark.nightowl .milkdown .code-block-wrapper .token.comment {
+  color: #637777 !important;
+  font-style: italic !important;
+}
+.dark.nightowl .milkdown .code-block-wrapper .token.string,
+.dark.nightowl .milkdown .code-block-wrapper .token.inserted {
+  color: #addb67 !important;
+}
+.dark.nightowl .milkdown .code-block-wrapper .token.number,
+.dark.nightowl .milkdown .code-block-wrapper .token.boolean {
+  color: #f78c6c !important;
+}
+.dark.nightowl .milkdown .code-block-wrapper .token.keyword {
+  color: #c792ea !important;
+}
+.dark.nightowl .milkdown .code-block-wrapper .token.function,
+.dark.nightowl .milkdown .code-block-wrapper .token.class-name {
+  color: #82aaff !important;
+}
+.dark.nightowl .milkdown .code-block-wrapper .token.operator {
+  color: #89ddff !important;
+}
+.dark.nightowl .milkdown .code-block-wrapper .token.variable {
+  color: #d6deeb !important;
+}
+.dark.nightowl .milkdown .code-block-wrapper .token.property {
+  color: #7fdbca !important;
+}
+.dark.nightowl .milkdown .code-block-wrapper .token.punctuation {
+  color: #d6deeb !important;
+}
+.dark.nightowl .milkdown .code-block-wrapper .token.attr-name {
+  color: #addb67 !important;
+}
+.dark.nightowl .milkdown .code-block-wrapper .token.attr-value {
+  color: #addb67 !important;
+}
+.dark.nightowl .milkdown .code-block-wrapper .token.tag {
+  color: #7fdbca !important;
+}
+.dark.nightowl .milkdown .code-block-wrapper .token.regex {
+  color: #f78c6c !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════ */
+/* ── MATCHA THEME OVERRIDES ─────────────────────────────────────  */
+/* ═══════════════════════════════════════════════════════════════ */
+
+.light.matcha .milkdown-editor-wrapper {
+  background: #eef4ee !important;
+  color: #1a2e1a !important;
+}
+
+.light.matcha .milkdown .editor,
+.light.matcha .milkdown .ProseMirror {
+  color: #1a2e1a !important;
+}
+
+.light.matcha .milkdown .editor h1,
+.light.matcha .milkdown .ProseMirror h1,
+.light.matcha .milkdown .editor h2,
+.light.matcha .milkdown .ProseMirror h2,
+.light.matcha .milkdown .editor h3,
+.light.matcha .milkdown .ProseMirror h3,
+.light.matcha .milkdown .editor h4,
+.light.matcha .milkdown .ProseMirror h4,
+.light.matcha .milkdown .editor h5,
+.light.matcha .milkdown .ProseMirror h5,
+.light.matcha .milkdown .editor h6,
+.light.matcha .milkdown .ProseMirror h6 {
+  color: #1a2e1a !important;
+  border-bottom-color: #c2d4c2 !important;
+}
+
+.light.matcha .milkdown .editor p,
+.light.matcha .milkdown .ProseMirror p,
+.light.matcha .milkdown ul,
+.light.matcha .milkdown ol,
+.light.matcha .milkdown li {
+  color: #1a2e1a !important;
+}
+
+.light.matcha .milkdown .editor a,
+.light.matcha .milkdown .ProseMirror a {
+  color: #4a7c59 !important;
+}
+
+.light.matcha .milkdown .editor a:hover,
+.light.matcha .milkdown .ProseMirror a:hover {
+  color: #3a6347 !important;
+}
+
+.light.matcha .milkdown .editor code:not(pre code),
+.light.matcha .milkdown .ProseMirror code:not(pre code) {
+  background: #e4ede4 !important;
+  color: #2d5a27 !important;
+  border: 1px solid #c2d4c2 !important;
+}
+
+.light.matcha .milkdown .editor pre,
+.light.matcha .milkdown .ProseMirror pre {
+  background: #e4ede4 !important;
+  border-color: #c2d4c2 !important;
+}
+
+.light.matcha .milkdown .editor pre code,
+.light.matcha .milkdown .ProseMirror pre code {
+  color: #1a2e1a !important;
+}
+
+.light.matcha .milkdown blockquote {
+  border-left-color: #4a7c59 !important;
+  color: #3d5a3d !important;
+  background: #e4ede4 !important;
+}
+
+.light.matcha .milkdown table {
+  border-color: #c2d4c2 !important;
+}
+
+.light.matcha .milkdown th,
+.light.matcha .milkdown td {
+  border-color: #c2d4c2 !important;
+  color: #1a2e1a !important;
+}
+
+.light.matcha .milkdown th {
+  background: #e4ede4 !important;
+}
+
+.light.matcha .milkdown tr:nth-child(even) {
+  background: #eef4ee !important;
+}
+
+.light.matcha .milkdown hr {
+  border-color: #c2d4c2 !important;
+}
+
+.light.matcha .milkdown strong {
+  color: #1a2e1a !important;
+}
+
+.light.matcha .milkdown .ProseMirror-placeholder {
+  color: #7a9e7a !important;
+}
+
+.light.matcha .code-block-header {
+  background: #e4ede4 !important;
+  border-bottom-color: #c2d4c2 !important;
+}
+
+.light.matcha .code-block-lang-label {
+  color: #3d5a3d !important;
+}
+
+.light.matcha .code-block-copy-btn {
+  color: #3d5a3d !important;
+}
+
+.light.matcha .code-block-copy-btn:hover {
+  color: #1a2e1a !important;
+  background: #d8e8d8 !important;
+  border-color: #c2d4c2 !important;
+}
+
+/* Matcha syntax tokens */
+.light.matcha .milkdown .code-block-wrapper .token.comment {
+  color: #7a9e7a !important;
+  font-style: italic !important;
+}
+.light.matcha .milkdown .code-block-wrapper .token.punctuation {
+  color: #1a2e1a !important;
+}
+.light.matcha .milkdown .code-block-wrapper .token.string,
+.light.matcha .milkdown .code-block-wrapper .token.inserted {
+  color: #2d6a2d !important;
+}
+.light.matcha .milkdown .code-block-wrapper .token.number,
+.light.matcha .milkdown .code-block-wrapper .token.boolean {
+  color: #5a6b00 !important;
+}
+.light.matcha .milkdown .code-block-wrapper .token.keyword {
+  color: #4a7c59 !important;
+}
+.light.matcha .milkdown .code-block-wrapper .token.function,
+.light.matcha .milkdown .code-block-wrapper .token.class-name {
+  color: #3a6347 !important;
+}
+.light.matcha .milkdown .code-block-wrapper .token.operator {
+  color: #5e9870 !important;
+}
+.light.matcha .milkdown .code-block-wrapper .token.variable {
+  color: #1a2e1a !important;
+}
+.light.matcha .milkdown .code-block-wrapper .token.property {
+  color: #4a7c59 !important;
+}
+.light.matcha .milkdown .code-block-wrapper .token.attr-name {
+  color: #2d6a2d !important;
+}
+.light.matcha .milkdown .code-block-wrapper .token.attr-value {
+  color: #2d6a2d !important;
+}
+.light.matcha .milkdown .code-block-wrapper .token.deleted {
+  color: #a63d3d !important;
+}
+.light.matcha .milkdown .code-block-wrapper .token.tag {
+  color: #3a6347 !important;
+}
+
+/* ── Math block styling ── */
+.milkdown [data-type="math_inline"] {
+  display: inline !important;
+  padding: 0 2px;
+  vertical-align: baseline;
+}
+
+.milkdown [data-type="math_block"] {
+  display: block !important;
+  text-align: center;
+  margin: 1.5rem 0 !important;
+  padding: 1rem 0;
+  overflow-x: auto;
+}
+
+.dark .milkdown .katex {
+  color: #e5e5e5 !important;
+}
+
+.light .milkdown .katex {
+  color: #1a1a1a !important;
+}
+
+/* ── Mermaid preview (decoration widget below code block) ── */
+.mermaid-preview {
+  display: none;
+  background: #0d0d0d;
+  overflow: hidden;
+}
+
+.mermaid-preview-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), transparent);
+}
+
+.mermaid-preview-toolbar-meta,
+.mermaid-preview-toolbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.mermaid-preview-toolbar-icon,
+.mermaid-viewer-title-icon {
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+.mermaid-preview-toolbar-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #a3a3a3;
+}
+
+.mermaid-preview-action,
+.mermaid-viewer-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.03);
+  color: #f5f5f5;
+  transition:
+    background 0.18s ease,
+    border-color 0.18s ease,
+    transform 0.18s ease;
+  cursor: pointer;
+}
+
+.mermaid-preview-action:hover,
+.mermaid-viewer-action:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.18);
+  transform: translateY(-1px);
+}
+
+.mermaid-preview-action span,
+.mermaid-viewer-action span {
+  font-size: 1rem;
+}
+
+.mermaid-preview-zoom-label,
+.mermaid-viewer-zoom-label {
+  min-width: 3rem;
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #d4d4d4;
+}
+
+.mermaid-preview-viewport {
+  overflow: auto;
+  padding: 1.25rem 1rem 1.5rem;
+  min-height: 80px;
+  text-align: center;
+}
+
+.mermaid-preview-canvas {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  min-width: 100%;
+  min-height: 220px;
+}
+
+.mermaid-preview svg {
+  overflow: visible;
+  max-width: none;
+  height: auto;
+  display: inline-block;
+  user-select: none;
+}
+
+.mermaid-placeholder {
+  color: #525252;
+  font-style: italic;
+  font-size: 0.875rem;
+}
+
+.mermaid-error-message {
+  color: #f87171;
+  font-size: 0.8rem;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+/* ── Mermaid light theme ── */
+.light .mermaid-preview {
+  background: #fafafa;
+}
+
+.light .mermaid-preview-toolbar {
+  border-top-color: rgba(23, 23, 23, 0.08);
+  background: linear-gradient(180deg, rgba(23, 23, 23, 0.03), transparent);
+}
+
+.light .mermaid-preview-toolbar-label {
+  color: #737373;
+}
+
+.light .mermaid-preview-action,
+.light .mermaid-viewer-action {
+  color: #171717;
+  background: rgba(23, 23, 23, 0.04);
+  border-color: rgba(23, 23, 23, 0.08);
+}
+
+.light .mermaid-preview-action:hover,
+.light .mermaid-viewer-action:hover {
+  background: rgba(23, 23, 23, 0.08);
+  border-color: rgba(23, 23, 23, 0.14);
+}
+
+.light .mermaid-preview-zoom-label,
+.light .mermaid-viewer-zoom-label {
+  color: #404040;
+}
+
+.light .mermaid-placeholder {
+  color: #a3a3a3;
+}
+
+.light .mermaid-error-message {
+  color: #dc2626;
+}
+
+/* ── Mermaid modal viewer ── */
+.mermaid-viewer-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 130;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+}
+
+.mermaid-viewer-shell {
+  width: min(96vw, 1200px);
+  height: min(92vh, 900px);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background:
+    radial-gradient(circle at top, rgba(255, 255, 255, 0.06), transparent 40%),
+    #090909;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+}
+
+.mermaid-viewer-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.mermaid-viewer-title-group,
+.mermaid-viewer-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.mermaid-viewer-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #fafafa;
+}
+
+.mermaid-viewer-subtitle {
+  font-size: 0.78rem;
+  color: #a3a3a3;
+}
+
+.mermaid-viewer-close {
+  margin-left: 0.25rem;
+}
+
+.mermaid-viewer-viewport {
+  position: relative;
+  flex: 1;
+  overflow: hidden;
+  padding: 1rem;
+  background:
+    linear-gradient(0deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.02)),
+    repeating-linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.02) 0,
+      rgba(255, 255, 255, 0.02) 1px,
+      transparent 1px,
+      transparent 28px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.02) 0,
+      rgba(255, 255, 255, 0.02) 1px,
+      transparent 1px,
+      transparent 28px
+    );
+}
+
+.mermaid-viewer-canvas {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.mermaid-viewer-canvas svg {
+  max-width: none;
+  width: auto;
+  height: auto;
+  user-select: none;
+}
+
+.mermaid-viewer-status {
+  position: absolute;
+  top: 1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.55rem 0.85rem;
+  border-radius: 999px;
+  background: rgba(10, 10, 10, 0.78);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #f5f5f5;
+  font-size: 0.78rem;
+  z-index: 2;
+}
+
+.mermaid-viewer-status-error {
+  color: #fca5a5;
+}
+
+.light .mermaid-viewer-shell {
+  border-color: rgba(23, 23, 23, 0.08);
+  background:
+    radial-gradient(circle at top, rgba(23, 23, 23, 0.04), transparent 40%),
+    #ffffff;
+}
+
+.light .mermaid-viewer-toolbar {
+  border-bottom-color: rgba(23, 23, 23, 0.08);
+}
+
+.light .mermaid-viewer-title {
+  color: #171717;
+}
+
+.light .mermaid-viewer-subtitle {
+  color: #737373;
+}
+
+.light .mermaid-viewer-viewport {
+  background:
+    linear-gradient(0deg, rgba(23, 23, 23, 0.015), rgba(23, 23, 23, 0.015)),
+    repeating-linear-gradient(
+      0deg,
+      rgba(23, 23, 23, 0.03) 0,
+      rgba(23, 23, 23, 0.03) 1px,
+      transparent 1px,
+      transparent 28px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(23, 23, 23, 0.03) 0,
+      rgba(23, 23, 23, 0.03) 1px,
+      transparent 1px,
+      transparent 28px
+    );
+}
+
+.light .mermaid-viewer-status {
+  background: rgba(255, 255, 255, 0.92);
+  border-color: rgba(23, 23, 23, 0.08);
+  color: #171717;
+}

@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  notemd:
+    image: abeggi/notemd:latest
+    container_name: notemd
+    restart: unless-stopped
+    ports:
+      - "3000:3000"   # Frontend
+      - "3001:3001"   # Backend API
+    environment:
+      - NODE_ENV=production
+      - BACKEND_INTERNAL_PORT=3001
+      - DOCUMENTS_PATH=/data/documents
+      - DB_PATH=/data/notemd.db
+      - JWT_SECRET=${JWT_SECRET}
+      - ENCRYPTION_KEY=${ENCRYPTION_KEY}
+      - ALLOWED_ORIGINS=http://${FRONTEND_URL}:${FRONTEND_PORT}
+      - ENABLE_ENCRYPTION=true
+    volumes:
+      - ./data:/data
+    networks:
+      - notemd-network
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:3001/api/health"]
+      interval: 5m
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    deploy:
+      resources:
+        limits:
+          memory: 1G
+        reservations:
+          memory: 512M
+networks:
+  notemd-network:
+    driver: bridge

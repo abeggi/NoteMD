@@ -1,0 +1,70 @@
+{
+  "name": "notemd-frontend",
+  "version": "2.5.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vinxi dev",
+    "build": "vinxi build",
+    "start": "vinxi start"
+  },
+  "dependencies": {
+    "@iconify-json/carbon": "^1.2.18",
+    "@kobalte/core": "^0.13.11",
+    "@milkdown/core": "^7.18.0",
+    "@milkdown/ctx": "^7.18.0",
+    "@milkdown/plugin-history": "^7.18.0",
+    "@milkdown/plugin-indent": "^7.18.0",
+    "@milkdown/plugin-listener": "^7.18.0",
+    "@milkdown/plugin-math": "^7.5.9",
+    "@milkdown/plugin-prism": "^7.18.0",
+    "@milkdown/plugin-tooltip": "^7.18.0",
+    "@milkdown/plugin-upload": "^7.18.0",
+    "@milkdown/preset-commonmark": "^7.18.0",
+    "@milkdown/preset-gfm": "^7.18.0",
+    "@milkdown/prose": "^7.18.0",
+    "@milkdown/theme-nord": "^7.18.0",
+    "@milkdown/utils": "^7.18.0",
+    "@panzoom/panzoom": "^4.6.1",
+    "@solidjs/router": "^0.15.4",
+    "@solidjs/start": "^1.3.2",
+    "@types/lodash-es": "^4.17.12",
+    "@types/mdast": "^4.0.4",
+    "@unocss/preset-icons": "^66.6.6",
+    "@unocss/preset-typography": "^66.6.6",
+    "@unocss/preset-wind4": "^66.6.6",
+    "@unocss/reset": "^66.6.6",
+    "katex": "^0.16.40",
+    "lodash-es": "^4.17.23",
+    "mdast-util-from-markdown": "^2.0.2",
+    "mdast-util-to-markdown": "^2.1.2",
+    "mermaid": "^11.13.0",
+    "micromark-extension-highlight-mark": "^1.2.0",
+    "micromark-util-types": "^2.0.2",
+    "pdfjs-dist": "^5.5.207",
+    "prismjs": "^1.30.0",
+    "solid-js": "^1.9.11",
+    "unified": "^11.0.5",
+    "unist-util-visit": "^5.1.0",
+    "unocss": "^66.6.6",
+    "vinxi": "^0.5.11"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "pnpm": {
+    "overrides": {
+      "rollup": "^4.59.0",
+      "h3": "^1.15.6",
+      "node-forge": "^1.4.0",
+      "tar": "^7.5.4",
+      "minimatch": "^5.1.7",
+      "glob": "^10.5.0",
+      "mdast-util-to-hast": "^13.2.1",
+      "lodash": "^4.17.23",
+      "diff": "^8.0.3",
+      "serialize-javascript": "^7.0.5",
+      "picomatch": "^4.0.4",
+      "brace-expansion": "^2.0.3"
+    }
+  }
+}
