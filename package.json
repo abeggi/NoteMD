@@ -7,6 +7,6 @@
   "scripts": {
     "docker:build": "docker build -t notemd:dev .",
     "docker:run": "docker run --rm -p 3000:3000 -p 3001:3001 notemd:dev",
-    "docker:publish": "docker buildx build --platform linux/amd64,linux/arm64 -t ghcr.io/abeggi/NoteMD:latest --push ."
+    "docker:publish": "docker buildx build --platform linux/amd64 -t ghcr.io/abeggi/notemd:latest --push ."
   }
 }

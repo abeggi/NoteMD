@@ -10,7 +10,7 @@ ENV VITE_GIT_COMMIT=${GIT_COMMIT}
 ENV VITE_GIT_BRANCH=${GIT_BRANCH}
 ENV VITE_BUILD_DATE=${BUILD_DATE}
 
-RUN npm install -g pnpm
+RUN npm install -g pnpm@10
 
 WORKDIR /app/frontend
 COPY frontend/package.json frontend/pnpm-lock.yaml ./
