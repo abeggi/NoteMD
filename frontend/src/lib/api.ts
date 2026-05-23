@@ -506,6 +506,32 @@ export class ApiClient {
     document.body.removeChild(a);
   }
 
+  async exportToDocx(path: string) {
+    const response = await fetch(`${API_URL}/api/documents/export-docx`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${this.token}`,
+      },
+      body: JSON.stringify({ path }),
+    });
+
+    if (!response.ok) {
+      throw new Error("DOCX export failed");
+    }
+
+    const blob = await response.blob();
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    const filename = path.split("/").pop()?.replace(/\.md$/, "") || "document";
+    a.download = `${filename}.docx`;
+    document.body.appendChild(a);
+    a.click();
+    window.URL.revokeObjectURL(url);
+    document.body.removeChild(a);
+  }
+
   async importDocuments(file: File) {
     const formData = new FormData();
     formData.append("file", file);
@@ -738,3 +764,4 @@ export const api = new Proxy({} as ApiClient, {
 // Export standalone functions for convenience
 export const exportDocuments = () => api.exportDocuments();
 export const importDocuments = (file: File) => api.importDocuments(file);
+export const exportToDocx = (path: string) => api.exportToDocx(path);

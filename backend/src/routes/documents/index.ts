@@ -22,6 +22,7 @@ import {
   cleanupInvalidFiles,
   deleteDocumentAttachments,
 } from "./helpers/files.js";
+import { markdownToDocx } from "./helpers/docx-export.js";
 import {
   saveDocumentSchema,
   createFolderSchema,
@@ -1396,6 +1397,51 @@ documentsRouter.post("/duplicate", async (c) => {
   } catch (error) {
     console.error("Error duplicating:", error);
     return c.json({ error: "Failed to duplicate" }, 500);
+  }
+});
+
+// Export single document as .docx
+documentsRouter.post("/export-docx", async (c) => {
+  const { path: docPath } = await c.req.json();
+
+  if (!docPath) {
+    return c.json({ error: "Path is required" }, 400);
+  }
+
+  const user = c.get("user");
+  const organizationId = user.currentOrgId;
+
+  if (!organizationId) {
+    return c.json({ error: "No organization context" }, 400);
+  }
+
+  const fullPath = sanitizePath(docPath, organizationId);
+
+  try {
+    const fileContent = await fs.readFile(fullPath, "utf-8");
+
+    let content: string;
+    if (ENABLE_ENCRYPTION) {
+      try {
+        content = decrypt(fileContent);
+      } catch {
+        content = fileContent;
+      }
+    } else {
+      content = fileContent;
+    }
+
+    const title = path.basename(docPath, ".md");
+    const docxBuffer = await markdownToDocx(content, title);
+
+    return c.body(new Uint8Array(docxBuffer), 200, {
+      "Content-Type":
+        "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "Content-Disposition": `attachment; filename="${encodeURIComponent(title)}.docx"`,
+    });
+  } catch (error) {
+    console.error("Error exporting to DOCX:", error);
+    return c.json({ error: "Failed to export to DOCX" }, 500);
   }
 });
 

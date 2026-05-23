@@ -356,6 +356,20 @@ export default function Sidebar(props: Readonly<SidebarProps>) {
                       </PopoverItem>
                     </Show>
 
+                    {/* Export to DOCX (files only) */}
+                    <Show when={nodeProps.node.type === "file" && props.onExportToDocx}>
+                      <PopoverItem
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          props.onExportToDocx?.(nodeProps.node.path);
+                          setOpenMenuPath(null);
+                        }}
+                      >
+                        <div class="i-carbon-document-export w-4 h-4" />
+                        Export to DOCX
+                      </PopoverItem>
+                    </Show>
+
                     {/* Delete action */}
                     <PopoverItem
                       onClick={(e) => {

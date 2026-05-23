@@ -19,6 +19,7 @@ export interface SidebarProps {
   onOrgSwitch: () => void;
   onArchiveItem: (path: string) => void;
   onDuplicateItem?: (path: string) => void;
+  onExportToDocx?: (path: string) => void;
   onViewHome: () => void;
   onViewArchive: () => void;
   onViewDeleted: () => void;

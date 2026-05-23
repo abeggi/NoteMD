@@ -263,6 +263,16 @@ export const AppLayout: ParentComponent<AppLayoutProps> = (props) => {
     }
   };
 
+  const exportToDocx = async (path: string) => {
+    try {
+      await api.exportToDocx(path);
+      setToast({ message: "Exported to DOCX", type: "success" });
+    } catch (error) {
+      console.error("Failed to export to DOCX:", error);
+      setToast({ message: "Failed to export to DOCX", type: "error" });
+    }
+  };
+
   const contextValue: AppLayoutContext = {
     allDocuments,
     loadAllDocuments,
@@ -328,6 +338,7 @@ export const AppLayout: ParentComponent<AppLayoutProps> = (props) => {
               onOrgSwitch={() => loadAllDocuments()}
               onArchiveItem={archiveItem}
               onDuplicateItem={duplicateItem}
+              onExportToDocx={exportToDocx}
               onViewHome={() => {
                 navigate(routes.homepage);
                 if (window.innerWidth < 1024) {
