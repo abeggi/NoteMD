@@ -551,6 +551,26 @@ export class ApiClient {
     return response.json();
   }
 
+  async importDocx(file: File) {
+    const formData = new FormData();
+    formData.append("file", file);
+
+    const response = await fetch(`${API_URL}/api/documents/import-docx`, {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${this.token}`,
+      },
+      body: formData,
+    });
+
+    if (!response.ok) {
+      const err = await response.json().catch(() => ({}));
+      throw new Error((err as any).error || "DOCX import failed");
+    }
+
+    return response.json() as Promise<{ path: string; title: string }>;
+  }
+
   async archiveDocument(path: string) {
     return this.request("/api/documents/archive", {
       method: "POST",
@@ -765,3 +785,4 @@ export const api = new Proxy({} as ApiClient, {
 export const exportDocuments = () => api.exportDocuments();
 export const importDocuments = (file: File) => api.importDocuments(file);
 export const exportToDocx = (path: string) => api.exportToDocx(path);
+export const importDocx = (file: File) => api.importDocx(file);

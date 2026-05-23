@@ -497,22 +497,26 @@ export default function Sidebar(props: Readonly<SidebarProps>) {
               onClick={() => uploadFileInputRef?.click()}
               variant="secondary"
               size="md"
-              title="Upload .md file"
+              title="Upload .md or .docx file"
             >
               <div class="i-carbon-upload w-4 h-4" />
             </Button>
             <input
               ref={uploadFileInputRef}
               type="file"
-              accept=".md,.txt,text/markdown"
+              accept=".md,.txt,.docx,text/markdown,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
               class="hidden"
               onChange={async (e) => {
                 const file = e.currentTarget.files?.[0];
                 if (!file) return;
                 try {
-                  const content = await file.text();
-                  const name = file.name.replace(/\.md$/i, "");
-                  await api.saveDocument("", content, true, "/", name);
+                  if (file.name.endsWith(".docx")) {
+                    await api.importDocx(file);
+                  } else {
+                    const content = await file.text();
+                    const name = file.name.replace(/\.md$/i, "");
+                    await api.saveDocument("", content, true, "/", name);
+                  }
                   props.onOrgSwitch();
                 } catch (err) {
                   console.error("Upload failed:", err);

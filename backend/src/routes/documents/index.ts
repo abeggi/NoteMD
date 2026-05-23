@@ -23,6 +23,7 @@ import {
   deleteDocumentAttachments,
 } from "./helpers/files.js";
 import { markdownToDocx } from "./helpers/docx-export.js";
+import { docxToMarkdown } from "./helpers/docx-import.js";
 import {
   saveDocumentSchema,
   createFolderSchema,
@@ -1442,6 +1443,82 @@ documentsRouter.post("/export-docx", async (c) => {
   } catch (error) {
     console.error("Error exporting to DOCX:", error);
     return c.json({ error: "Failed to export to DOCX" }, 500);
+  }
+});
+
+// Import a .docx file and convert to markdown
+documentsRouter.post("/import-docx", async (c) => {
+  try {
+    const user = c.get("user");
+    const organizationId = user.currentOrgId;
+    const userId = user.userId;
+
+    if (!organizationId) {
+      return c.json({ error: "No organization context" }, 400);
+    }
+
+    const body = await c.req.parseBody();
+    const file = (body as Record<string, unknown>).file;
+    if (!(file instanceof File)) {
+      return c.json({ error: "File is required" }, 400);
+    }
+
+    const buffer = Buffer.from(await file.arrayBuffer());
+    const markdown = await docxToMarkdown(buffer);
+
+    if (!markdown.trim()) {
+      return c.json({ error: "DOCX file appears to be empty" }, 400);
+    }
+
+    // Generate filename from the original .docx filename
+    const originalName = file.name.replace(/\.docx$/i, "");
+    const safeName = sanitizeFilename(originalName);
+    const fileName = safeName.endsWith(".md") ? safeName : `${safeName}.md`;
+
+    const docPath = `/${fileName}`;
+    const uniquePath = await getUniqueFilePath(docPath, organizationId, true);
+    const fullPath = sanitizePath(uniquePath, organizationId);
+
+    await ensureOrgDirectoryExists(organizationId);
+    await fs.mkdir(path.dirname(fullPath), { recursive: true });
+
+    const fileContent = encrypt(markdown);
+    await fs.writeFile(fullPath, fileContent, "utf-8");
+
+    const stats = await fs.stat(fullPath);
+    const title =
+      markdown
+        .split("\n")[0]
+        .replace(/^#+\s*/, "")
+        .trim() || path.basename(uniquePath, ".md");
+
+    documentQueries.upsert.run(
+      organizationId,
+      userId,
+      uniquePath,
+      title,
+      null,
+      stats.size,
+    );
+
+    try {
+      documentQueries.updateContent.run(organizationId, uniquePath);
+    } catch {
+      // Row may not exist in FTS yet
+    }
+    documentQueries.insertContent.run(
+      organizationId,
+      uniquePath,
+      uniquePath,
+      organizationId,
+      uniquePath,
+      escapeHtmlForFts(markdown),
+    );
+
+    return c.json({ path: uniquePath, title });
+  } catch (error) {
+    console.error("Error importing DOCX:", error);
+    return c.json({ error: "Failed to import DOCX" }, 500);
   }
 });
 
