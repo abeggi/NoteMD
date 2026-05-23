@@ -60,3 +60,10 @@ Node 20 is required (see `.nvmrc` files).
 ## No tests, no lint, no CI
 
 There are no test suites, lint rules, formatters, typecheck scripts, or CI workflows in this repo. If adding tooling, don't assume any pre-existing configuration.
+
+## Agent rules
+
+- **Never** run Docker builds or pushes (`docker build`, `docker buildx`, `npm run docker:build`, `npm run docker:publish`) unless the user explicitly asks.
+- **Never** run `git commit` or `git push` unless the user explicitly asks.
+- **Never** restart services (`./start.sh restart`, `kill`, manual process management) unless the user explicitly asks.
+- When in doubt whether an action is a side-effect, ask first.

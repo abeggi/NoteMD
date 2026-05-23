@@ -12,7 +12,7 @@ Self-hosted markdown editor with live preview, document encryption, multi-user s
 - **Attachments** — Upload and embed images, PDFs, and files in documents
 - **Mermaid diagrams** — Render diagrams and flowcharts inline
 - **Math** — LaTeX math via KaTeX
-- **Import/Export** — Bulk import/export documents as tar.gz archives, single-document DOCX export
+- **Import/Export** — Bulk import/export documents as tar.gz archives, single-document DOCX import & export
 
 ## Quick start
 

@@ -20,17 +20,37 @@ export async function docxToMarkdown(buffer: Buffer): Promise<string> {
 
   let html = result.value;
 
-  // Strip <p> tags inside table cells — mammoth wraps cell content in <p>
-  html = html.replace(/<(th|td)><p>/gi, "<$1>");
-  html = html.replace(/<\/p><\/(th|td)>/gi, "</$1>");
+  // Strip <a> tags (keep text) — TOC/summary links are dead in markdown anyway
+  html = html.replace(/<a[^>]*>/gi, "");
+  html = html.replace(/<\/a>/gi, "");
+
+  // Promote first row of each table to header if missing — required by turndown GFM
+  html = html.replace(
+    /<table>(?!\s*<thead>)([\s\S]*?)(<\/table>)/gi,
+    (_, body, close) => {
+      const fixed = body.replace(
+        /<tr>(\s*<td[^>]*>[\s\S]*?<\/td>\s*.*?)<\/tr>/i,
+        "<thead><tr>$1</tr></thead>",
+      );
+      return "<table>" + fixed.replace(/<td([^>]*)>/gi, "<th$1>").replace(/<\/td>/gi, "</th>") + close;
+    },
+  );
+
+  // Strip <p>, <img>, and <a> inside table cells
+  html = html.replace(
+    /(<(?:th|td)>)([\s\S]*?)(<\/(?:th|td)>)/gi,
+    (_, open, body, close) =>
+      open +
+      body.replace(/<\/?p>/gi, "").replace(/<img[^>]*>/gi, "").replace(/<a[^>]*>/gi, "").replace(/<\/a>/gi, "") +
+      close,
+  );
 
   let md = turndown.turndown(html);
 
-  // Strip Word TOC/bookmark anchors that turndown may preserve as HTML
-  md = md.replace(/<a id="[^"]*"><\/a>/g, "");
-  md = md.replace(/<a id="[^"]*">/g, "");
+  // Strip any remaining HTML anchors/images that survived turndown
+  md = md.replace(/<a[^>]*>[^<]*<\/a>/g, "");
+  md = md.replace(/<a[^>]*>/g, "");
   md = md.replace(/<\/a>/g, "");
-  // Strip any remaining base64 image references
   md = md.replace(/!\[[^\]]*\]\(data:image\/[^)]+\)/g, "");
 
   return md;
