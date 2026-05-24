@@ -151,6 +151,11 @@
           <h3>Mermaid Diagrams &amp; Math</h3>
           <p>Render flowcharts, diagrams, and LaTeX math inline. Perfect for technical notes.</p>
         </div>
+        <div class="feature">
+          <div class="icon">&#128196;</div>
+          <h3>DOCX Import &amp; Export</h3>
+          <p>Import Word documents (converted to markdown) and export any note as .docx with full formatting.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -158,17 +163,28 @@
   <section id="setup">
     <div class="container">
       <h2>Quick Setup</h2>
-      <p class="subtitle">Get up and running in minutes with Docker</p>
+      <p class="subtitle">Get up and running in minutes</p>
       <div class="setup-block">
+        <h3 style="color:#f0f6fc;margin-bottom:12px">Docker</h3>
         <pre>docker run -d \
   --name notemd \
   -p 3000:3000 \
   -v ./data:/data \
   abeggi/notemd:latest</pre>
       </div>
-      <p style="text-align:center; margin-top: 24px; color: #8b949e; font-size: 14px;">
+      <p style="text-align:center; margin: 24px 0; color: #8b949e; font-size: 14px;">
         Then open <a href="http://localhost:3000">http://localhost:3000</a>
       </p>
+      <div class="setup-block" style="margin-top:32px">
+        <h3 style="color:#f0f6fc;margin-bottom:12px">Bare Metal (systemd)</h3>
+        <pre>git clone https://github.com/abeggi/NoteMD.git
+cd NoteMD
+cp .env.example .env
+# edit .env with your secrets
+
+sudo ./notemd.sh install   # builds, installs service, enables on boot
+sudo ./notemd.sh start     # start backend + frontend</pre>
+      </div>
     </div>
   </section>
 
