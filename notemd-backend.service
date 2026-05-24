@@ -1,0 +1,19 @@
+[Unit]
+Description=NoteMD Backend
+Documentation=https://github.com/abeggi/NoteMD
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=__PROJECT_ROOT__/backend
+ExecStart=__NODE__ __PROJECT_ROOT__/backend/dist/index.js
+EnvironmentFile=-__PROJECT_ROOT__/backend/.env
+Environment=NODE_ENV=production
+Restart=on-failure
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

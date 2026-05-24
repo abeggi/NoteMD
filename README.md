@@ -52,7 +52,43 @@ cp .env.example .env
 
 Access at `http://localhost:3000`. Use `./start.sh stop` to stop, `./start.sh status` to check.
 
+#### Production (bare metal)
+
+```bash
+# Install systemd services (builds, installs, enables on boot)
+sudo ./notemd.sh install
+
+# Manage services
+sudo ./notemd.sh start     # Start backend + frontend
+sudo ./notemd.sh stop      # Stop both
+sudo ./notemd.sh status    # Check status
+sudo ./notemd.sh restart   # Restart both
+
+# Remove services
+sudo ./notemd.sh uninstall
+```
+
+Services run compiled code. To rebuild after updates:
+
+```bash
+./notemd.sh build           # Compile both packages
+sudo ./notemd.sh restart    # Reload services
+```
+
 #### Manual start (two terminals)
+
+```bash
+# Terminal 1 — Backend
+cd backend
+cp .env.example .env
+npm install
+npm run dev
+
+# Terminal 2 — Frontend
+cd frontend
+pnpm install
+pnpm run dev
+```
 
 ```bash
 # Terminal 1 — Backend

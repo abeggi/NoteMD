@@ -1,0 +1,22 @@
+[Unit]
+Description=NoteMD Frontend
+Documentation=https://github.com/abeggi/NoteMD
+After=network.target notemd-backend.service
+Requires=notemd-backend.service
+BindsTo=notemd-backend.service
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=__PROJECT_ROOT__/frontend
+ExecStart=__NODE__ __PROJECT_ROOT__/frontend/.output/server/index.mjs
+Environment=PORT=3000
+Environment=VITE_API_URL=http://localhost:3001
+Environment=NODE_ENV=production
+Restart=on-failure
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
