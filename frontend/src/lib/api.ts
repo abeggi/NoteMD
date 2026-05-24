@@ -2,27 +2,10 @@
 // Check if demo mode is enabled
 const isDemoMode = import.meta.env.VITE_DEMO_MODE === "true";
 
-// Dynamically construct API URL for separate frontend/backend ports
-const getApiUrl = () => {
-  if (typeof window === "undefined") {
-    // Server-side (SSR): talk directly to the backend on localhost
-    return `http://localhost:${process.env.BACKEND_INTERNAL_PORT || 3001}`;
-  }
-
-  // Check for build-time env var first
-  if (import.meta.env.VITE_API_URL) {
-    return import.meta.env.VITE_API_URL;
-  }
-
-  // Client-side: use the same origin so the request goes through the frontend
-  // server, which proxies /api/* to the backend internally.
-  // This works whether the app is accessed directly on port 3000 or behind a
-  // reverse proxy (e.g. Nginx Proxy Manager) on port 80/443 with no backend
-  // port exposed.
-  return window.location.origin;
-};
-
-const API_URL = getApiUrl();
+// Use relative URLs — the frontend server proxies /api/** to the backend
+// in both dev (vinxi proxying) and production (nitro route rules).
+// This avoids SSR/client URL mismatch and works behind reverse proxies.
+const API_URL = "";
 
 export interface Document {
   name: string;
